@@ -1,67 +1,128 @@
-﻿// Pierwsza wersja programu, przy założeniu że zmienna "płeć" może przyjąć tylko dwie wartości.
+﻿int number = 295177;
+string numberAsString = number.ToString();
+char[] letters = numberAsString.ToArray();
 
-var name = "Ewa";
-bool sexFemale = true;
-int age = 33;
+int counter0 = 0;
+int counter1 = 0;
+int counter2 = 0;
+int counter3 = 0;
+int counter4 = 0;
+int counter5 = 0;
+int counter6 = 0;
+int counter7 = 0;
+int counter8 = 0;
+int counter9 = 0;
 
-//var sex = "female";
-
-
-
-if (!sexFemale)
+foreach (char letter in letters)
 {
-    if (age < 18)
+    if (letter == '0')
     {
-        Console.WriteLine("Niepełnoletni Mężczyzna");
+        counter0++;
     }
-    else
+    else if (letter == '1')
     {
-        Console.WriteLine("Pełnoletni Mężczyzna");
+        counter1++;
+    }
+    else if (letter == '2')
+    {
+        counter2++;
+    }
+    else if (letter == '3')
+    {
+        counter3++;
+    }
+    else if (letter == '4')
+    {
+        counter4++;
+    }
+    else if (letter == '5')
+    {
+        counter5++;
+    }
+    else if (letter == '6')
+    {
+        counter6++;
+    }
+    else if (letter == '7')
+    {
+        counter7++;
+    }
+    else if (letter == '8')
+    {
+        counter8++;
+    }
+    else if (letter == '9')
+    {
+        counter9++;
     }
 }
 
-if (sexFemale)
-{
-    if (name == "Ewa" && age == 33)
-    {
-        Console.WriteLine("Ewa, lat 33");
-    }
-    else if (age < 30)
-    {
-        Console.WriteLine("Kobieta poniżej 30 lat");
-    }
-    else
-    {
-        Console.WriteLine("Kobieta w wieku conajmniej 30 lat");
-    }
-}
+Console.WriteLine("Liczba: " + number);
+Console.WriteLine("0 => " + counter0);
+Console.WriteLine("1 => " + counter1);
+Console.WriteLine("2 => " + counter2);
+Console.WriteLine("3 => " + counter3);
+Console.WriteLine("4 => " + counter4);
+Console.WriteLine("5 => " + counter5);
+Console.WriteLine("6 => " + counter6);
+Console.WriteLine("7 => " + counter7);
+Console.WriteLine("8 => " + counter8);
+Console.WriteLine("9 => " + counter9);
 
-// Druga wersja programu w przypadku zwykłej zmiennej "var sex =famel/male".
+// Wersja druga
 
-//if (sex == "female")
-{
-    //  if (name == "Ewa" && age == 33)
-    {
-        //    Console.WriteLine("Ewa, lat 33");
-    }
-    //else if (age < 30)
-    {
-        //  Console.WriteLine("Kobieta poniżej 30 lat");
-    }
-    //else if (age >= 30)
-    {
-        //  Console.WriteLine("Kobieta w wieku conajmniej 30 lat");
-    }
-}
+//int number = 295177;
+//string numberAsString = number.ToString();
+//char[] letters = numberAsString.ToArray();
+//int[] counters = new int[10];
 
-//if (sex == "male")
-{
-    //  if (age < 18)
-    {
-        //    Console.WriteLine("Niepełnoletni Mężczyzna");
-    }
-    //else
-    {
-        //  Console.WriteLine("Pełnoletni Mężczyzna");
-    }
-}
+//foreach (int letter in letters)
+//{
+//    if (letter == '0')
+//    {
+//        counters[0]++;
+//    }
+//    else if (letter == '1')
+//    {
+//        counters[1]++;
+//    }
+//    else if (letter == '2')
+//    {
+//        counters[2]++;
+//    }
+//    else if (letter == '3')
+//    {
+//        counters[3]++;
+//    }
+//    else if (letter == '4')
+//    {
+//        counters[4]++;
+//    }
+//    else if (letter == '5')
+//    {
+//        counters[5]++;
+//    }
+//    else if (letter == '6')
+//    {
+//        counters[6]++;
+//    }
+//    else if (letter == '7')
+//    {
+//        counters[7]++;
+//    }
+//    else if (letter == '8')
+//    {
+//        counters[8]++;
+//    }
+//    else if (letter == '9')
+//    {
+//        counters[9]++;
+//    }
+//}
+
+//Console.WriteLine("Liczba: " + number);
+//var i = 0;
+//foreach (int counter in counters)
+//{
+//    Console.WriteLine(i++ + "=>" + counter);
+//}
