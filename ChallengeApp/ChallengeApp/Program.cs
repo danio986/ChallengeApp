@@ -1,128 +1,44 @@
-﻿int number = 295177;
-string numberAsString = number.ToString();
-char[] letters = numberAsString.ToArray();
+﻿using ChallengeApp;
 
-int counter0 = 0;
-int counter1 = 0;
-int counter2 = 0;
-int counter3 = 0;
-int counter4 = 0;
-int counter5 = 0;
-int counter6 = 0;
-int counter7 = 0;
-int counter8 = 0;
-int counter9 = 0;
+Employee user1 = new Employee("Daniel", "XYZ", 20);
+Employee user2 = new Employee("Natalia", "XYZ", 21);
+Employee user3 = new Employee("Piotr", "XYZ", 22);
 
-foreach (char letter in letters)
+user1.AddGrade(5);
+user1.AddGrade(3);
+user1.AddGrade(2);
+user1.AddGrade(9);
+user1.AddGrade(7);
+
+user2.AddGrade(5);
+user2.AddGrade(5);
+user2.AddGrade(8);
+user2.AddGrade(3);
+user2.AddGrade(9);
+user2.AddGrade(9);
+
+user3.AddGrade(5);
+user3.AddGrade(3);
+user3.AddGrade(8);
+user3.AddGrade(1);
+user3.AddGrade(9);
+
+List<Employee> users = new List<Employee>()
 {
-    if (letter == '0')
+    user1, user2, user3
+};
+
+int maxResult = -1;
+Employee userWithMaxResult = null;
+
+foreach (var user in users)
+{
+    if (user.Result > maxResult)
     {
-        counter0++;
-    }
-    else if (letter == '1')
-    {
-        counter1++;
-    }
-    else if (letter == '2')
-    {
-        counter2++;
-    }
-    else if (letter == '3')
-    {
-        counter3++;
-    }
-    else if (letter == '4')
-    {
-        counter4++;
-    }
-    else if (letter == '5')
-    {
-        counter5++;
-    }
-    else if (letter == '6')
-    {
-        counter6++;
-    }
-    else if (letter == '7')
-    {
-        counter7++;
-    }
-    else if (letter == '8')
-    {
-        counter8++;
-    }
-    else if (letter == '9')
-    {
-        counter9++;
+        maxResult = user.Result;
+        userWithMaxResult = user;
     }
 }
 
-Console.WriteLine("Liczba: " + number);
-Console.WriteLine("0 => " + counter0);
-Console.WriteLine("1 => " + counter1);
-Console.WriteLine("2 => " + counter2);
-Console.WriteLine("3 => " + counter3);
-Console.WriteLine("4 => " + counter4);
-Console.WriteLine("5 => " + counter5);
-Console.WriteLine("6 => " + counter6);
-Console.WriteLine("7 => " + counter7);
-Console.WriteLine("8 => " + counter8);
-Console.WriteLine("9 => " + counter9);
-
-// Wersja druga
-
-//int number = 295177;
-//string numberAsString = number.ToString();
-//char[] letters = numberAsString.ToArray();
-//int[] counters = new int[10];
-
-//foreach (int letter in letters)
-//{
-//    if (letter == '0')
-//    {
-//        counters[0]++;
-//    }
-//    else if (letter == '1')
-//    {
-//        counters[1]++;
-//    }
-//    else if (letter == '2')
-//    {
-//        counters[2]++;
-//    }
-//    else if (letter == '3')
-//    {
-//        counters[3]++;
-//    }
-//    else if (letter == '4')
-//    {
-//        counters[4]++;
-//    }
-//    else if (letter == '5')
-//    {
-//        counters[5]++;
-//    }
-//    else if (letter == '6')
-//    {
-//        counters[6]++;
-//    }
-//    else if (letter == '7')
-//    {
-//        counters[7]++;
-//    }
-//    else if (letter == '8')
-//    {
-//        counters[8]++;
-//    }
-//    else if (letter == '9')
-//    {
-//        counters[9]++;
-//    }
-//}
-
-//Console.WriteLine("Liczba: " + number);
-//var i = 0;
-//foreach (int counter in counters)
-//{
-//    Console.WriteLine(i++ + "=>" + counter);
-//}
+Console.WriteLine("Pracownik z najwyższą oceną to: " + userWithMaxResult.Name + " " + userWithMaxResult.Surname + ", lat: " + userWithMaxResult.Age);
+Console.WriteLine("Wynik: " + userWithMaxResult.Result);
