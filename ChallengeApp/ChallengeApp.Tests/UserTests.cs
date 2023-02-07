@@ -16,7 +16,7 @@ namespace ChallengeApp.Tests
 
             //assert
             Assert.AreEqual(6, result);
-           
+
         }
         [Test]
         public void CheckSumGradesOfEmployee2()
