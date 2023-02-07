@@ -1,5 +1,5 @@
 ﻿namespace ChallengeApp;
-class Employee
+public class Employee
 {
     private List<int> grades = new List<int>();
 
