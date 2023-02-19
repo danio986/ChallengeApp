@@ -39,25 +39,11 @@ public class Employee
         }
     }
 
-    //public void AddGrade(double grade)
-    //{
-    //    float valueInFloat = (float)grade;
-    //    this.AddGrade(valueInFloat);
-    //}
-    public void AddGrade(int grade)
+    public void AddGrade(double grade)
     {
         float valueInFloat = (float)grade;
         this.AddGrade(valueInFloat);
     }
-
-    //public void AddGrade(long grade)
-    //{
-    //    float valueInFloat = (float)grade;
-    //    this.AddGrade(valueInFloat);
-    //}
-
-
-
 
     public Statistics GetStatistics()
     {
