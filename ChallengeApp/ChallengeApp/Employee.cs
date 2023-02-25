@@ -23,7 +23,7 @@ public class Employee
         }
         else
         {
-            Console.WriteLine("Invalid grade value");
+            throw new Exception("Invalid grade value");
         }
     }
 
@@ -52,20 +52,23 @@ public class Employee
                 this.grades.Add(20);
                 break;
             default:
-                Console.WriteLine("Wrong letter");
-                break;
+                throw new Exception("Wrong letter");
         }
     }
 
     public void AddGrade(string grade)
     {
-        if (float.TryParse(grade, out float result))
+        if (float.TryParse(grade, out float result1))
         {
-            this.AddGrade(result);
+            this.AddGrade(result1);
+        }
+        else if (char.TryParse(grade, out char result2))
+        {
+            this.AddGrade(result2);
         }
         else
         {
-            Console.WriteLine("String is not float");
+            throw new Exception("String is not float");
         }
     }
 
