@@ -1,18 +1,12 @@
 ﻿namespace ChallengeApp;
-public class Employee
+public class Employee : Person
 {
     private List<float> grades = new List<float>();
 
     //Konstruktor - wywolywany zawsze przy tworzeniu nowego obiektu
-    public Employee(string name, string surname)
-    {
-        this.Name = name;
-        this.Surname = surname;
-    }
-
-    //Pola - parametry opisujace nasz obiekt
-    public string Name { get; private set; }
-    public string Surname { get; private set; }
+    public Employee(string name, string surname, char sex)
+        : base(name, surname, sex)
+    { }
 
     //Metoda - 
     public void AddGrade(float grade)
