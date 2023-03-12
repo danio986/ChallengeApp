@@ -5,7 +5,11 @@ Console.WriteLine("===========================================");
 Console.WriteLine();
 
 //var employee = new Employee("Daniel", "XYZ");
-var employee = new Supervisor("Daniel", "XYZ");
+var employee = new EmployeeInFile("Daniel", "XYZ");
+employee.AddGrade(12);
+employee.AddGrade('a');
+employee.AddGrade(0.5f);
+employee.AddGrade("B");
 
 while (true)
 {
