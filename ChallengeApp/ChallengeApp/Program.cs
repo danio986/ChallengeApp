@@ -11,6 +11,15 @@ employee.AddGrade('a');
 employee.AddGrade(0.5f);
 employee.AddGrade("B");
 
+void EmployeeGradeAdded(object sender, EventArgs args)
+{
+    Console.WriteLine("Dodano nową ocenę");
+}
+
+employee.GradeAdded += EmployeeGradeAdded;
+
+employee.AddGrade(0.6f);
+
 while (true)
 {
     Console.WriteLine("Podaj kolejną ocenę pracownika: ");
