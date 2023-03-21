@@ -2,7 +2,6 @@
 {
     public abstract class Person
     {
-
         public Person(string name, string surname, char sex)
         {
             this.Name = name;

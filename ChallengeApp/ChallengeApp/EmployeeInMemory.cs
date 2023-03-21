@@ -93,7 +93,14 @@
 
         public override Statistics GetStatistics()
         {
-            throw new NotImplementedException();
+            var statistics = new Statistics();
+
+            foreach(var grade in this.grades) 
+            {
+                statistics.AddGrade(grade);
+            }
+
+            return statistics;
         }
     }
 }
